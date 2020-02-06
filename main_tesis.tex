@@ -1,0 +1,134 @@
+\documentclass[a4paper,12pt,twoside]{book}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Preámbulo del archivo    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{preamble.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Arranca el documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Caratula
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+
+\begin{center} 
+	\large{
+		\epsfig{file=logo_fcen_uba.png, angle=0, width=0.25\textwidth}\vspace{1cm}\\
+		\textbf{UNIVERSIDAD DE BUENOS AIRES}\\
+		Facultad de Ciencias Exactas y Naturales\\
+		Departamento de Ciencias de la Atmósfera y los Océanos\vspace{1.25cm}\\
+		\textbf{\LARGE Las tendencias de largo plazo de la temperatura superficial del mar alrededor de	Sudamérica y su posible impacto ecológico} 
+		\vspace{0.5cm}\\ 
+		Tesis presentada para optar al título de \\
+		Doctor de la Universidad de Buenos Aires en el área Ciencias de la Atmósfera y los Océanos\\
+		por \textbf{Lic. Daniela B. Risaro} \vspace{1.25cm}\\ 
+		Director de Tesis: Alberto R. Piola\\
+		Co-Directora de Tesis: Dra. María Paz Chidichimo\\
+		Consejero de estudios: Dr. Martín Saraceno  \\
+		Lugar de trabajo: Departamento de Oceanografía, Servicio de Hidrografía Naval (SHN)
+		\vspace{1.25cm}\\ 
+		Buenos Aires, 2020
+	}
+\end{center}
+
+
+\chapter*{Resumen}
+
+\addcontentsline{toc}{chapter}{Resumen}
+\vspace{-1cm}
+\begin{center}
+	\textbf{\large{Las pelotudez mas grande del mundo}}
+\end{center}
+\input{resumen_esp.tex}
+
+\chapter*{Abstract}
+\vspace{-1cm}
+\begin{center}
+\textbf{\large{The biggest shit of the whole world}}
+\end{center}
+
+\input{resumen_eng.tex}
+
+\chapter*{Agradecimientos}
+\input{agradecimientos.tex}
+\addcontentsline{toc}{chapter}{Agradecimientos}
+
+\chapter*{Acrónimos}
+\input{acronimos.tex}
+\addcontentsline{toc}{chapter}{Acrónimos}
+
+\chapter*{Publicaciones}
+\addcontentsline{toc}{chapter}{Publicaciones}
+
+\begin{itemize}%
+\item {Artículos en revistas internacionales con referato:}
+
+\begin{itemize}%
+	
+\item \textbf{Silicon Isotope Separation by two frequency IRMPD}, M. Risaro, V. D'Accurso, J. Codnia, M.L. Azc\'arate. 
+\textit{Sociedad Española de Óptica; \'Optica Pura y Aplicada}; 50; 3; 8-2017; 229-237.	
+	
+\end{itemize}
+
+%	\item{Art\'iculos en revistas nacionales con referato}
+%	\begin{itemize}%
+	
+%	\item \textbf{Desarrollo de un l\'aser TEA de CO$_{2}$ de alta coherencia.}, M. Risaro, J. Codnia, M. L. Azcárate. \textit{Anales AFA} 25; 4; 11-2014; 167-170.
+	
+%	\end{itemize}
+
+\end{itemize}
+
+%% INDICE!
+\tableofcontents
+\listoffigures
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chap_01_dani.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chap_02_dani.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chap_03_dani.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chap_04_dani.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chap_05_dani.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chap_06_dani.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chap_07_dani.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chap_08_dani.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part*{Apéndices}
+\addcontentsline{toc}{chapter}{Apendices}
+\appendix
+\renewcommand*{\chaptername}{\appendixname}
+
+\input{appendix.tex}
+
+\backmatter
+
+
+\printbibliography
+\end{document}
+
+

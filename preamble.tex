@@ -1,0 +1,212 @@
+%% Preambulo de la tesis
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{mathrsfs,amsmath}   % need for subequations
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{color}	
+\usepackage{emptypage}
+\usepackage{multirow}
+\usepackage{dirtytalk}
+\usepackage{soul}
+%\usepackage{ulem}
+\decimalpoint
+%\usepackage[latin1]{inputenc}%para las tildes
+%\usepackage{charter}%font
+\usepackage{scalefnt}		%agranda la letra del texto no los ttulos va con el comando \salefont{0.5} ms abajo
+\usepackage{epstopdf}
+
+\usepackage{extsizes} 		%permite tamaos 9 8 14 17 20
+\usepackage{fancyhdr} 		%fancy header abajo est la configuracin.
+\usepackage{comment}
+\usepackage{appendix}
+\usepackage{float}
+
+\usepackage{acronym}
+
+\usepackage{titlesec}
+\usepackage{epigraph}
+\setlength\epigraphwidth{.6\textwidth}
+\setlength\epigraphrule{0.25pt}
+%\usepackage[Sonny]{fncychap}
+
+\usepackage{caption}
+\captionsetup{margin=1cm}
+%\captionsetup{width=.95\textwidth}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,%
+	citecolor=black,%
+	filecolor=black,%
+	linkcolor=black,%
+	urlcolor=black
+}
+
+%%%-------------------------------------------
+% Paquete para blintext
+\usepackage{lipsum}
+\usepackage[pangram]{blindtext}
+\usepackage{algorithm}
+
+%%-----------Bibliography
+
+%\usepackage[sorting=none,backend=bibtex]{biblatex} %Imports biblatex package
+%\addbibresource{sample.bib} %Import the bibliography file
+\usepackage[style=alphabetic,backend=bibtex]{biblatex}
+%\usepackage[style=alphabetic]{biblatex}
+\addbibresource{sample.bib} %Imports bibliography file
+%%-----------Utilizar colores para texto
+
+%%----------- Más herramientas de matemática
+\usepackage{chemformula}
+%%----------- Cosas de química
+\usepackage{chemist}
+
+
+% \titleformat{\chapter}[display]
+%   {\bfseries\Large}
+%   {\filright{\chaptertitlename} \Huge\thechapter}
+%   {1ex}
+%   {\titlerule\vspace{1ex}\filright}
+%   [\vspace{1ex}\titlerule]
+
+
+%\input{Qcircuit.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Pgina y Mrgenes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% a4 paper tiene 210mm*297mm
+% a5 paper tiene 148.5mm*210mm
+%\voffset=-2cm \hoffset=-2 cm
+%\linespread{1.5}
+%\hyphenation{}
+%\topskip=0cm
+%\headsep=0cm
+
+\usepackage[a4paper,width=160mm,top=25mm,bottom=25mm,bindingoffset=15mm]{geometry}
+
+\begin{comment}
+\textwidth      = 160 mm
+\textheight     = 230 mm
+\oddsidemargin  = 0.0 cm 	%0 equivale a est a 1in o 2.54cm del borde
+\evensidemargin = 0.0 cm
+\topmargin      = 0   cm	%
+\headheight     = 13pt
+\end{comment}
+
+
+%% Fancy Header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fancy Header Style Options
+
+\pagestyle{fancy}                       		% Sets fancy header and footer
+\fancyfoot{}                            		% Delete current footer settings
+\renewcommand{\chaptermark}[1]{         		% Lower Case Chapter marker style
+	\markboth{\chaptername\ \thechapter.\ #1}{}}	%
+\renewcommand{\sectionmark}[1]{         		% Lower case Section marker style
+	\markright{\thesection.\ #1}}         			%
+\fancyhead[LE,RO]{\small\thepage}    			% Page number (boldface) in left on even  pages and right on odd pages
+\fancyhead[RE]{\small\leftmark}      			% Chapter in the right oneven pages
+\fancyhead[LO]{\small\rightmark}     			% Section in the left on odd pages
+
+\renewcommand{\headrulewidth}{1pt}    			% Width of head rule
+
+%%% Clear Header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%Nuevos Comandos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+%hace ecuaciones comentadas como en el libro de dirac.
+\newcommand{\eccom}[2]{
+	\begin{minipage}{4cm}
+		#1
+	\end{minipage}
+	\begin{minipage}[b]{10cm}
+		\begin{eqnarray}
+		#2
+		\end{eqnarray}
+	\end{minipage}
+	\newline}
+
+
+%hace daggers
+\newcommand{\da}{^\dagger}
+%hace brakets
+\newcommand{\ket}[1]{| #1\rangle}
+\newcommand{\bra}[1]{\langle #1|}
+\newcommand{\braket}[2]{\langle#1\vert#2\rangle}
+\newcommand{\ketbra}[2]{\vert#1\rangle \langle#2\vert}
+\newcommand{\mean}[1]{\langle #1\rangle}
+\newcommand{\abs}[1]{\bigl| #1 \bigr|}
+
+\newcommand{\su}{\uparrow}
+\newcommand{\sd}{\downarrow}
+
+\newcommand{\E}{\mathcal{E}}
+%\newcommand{\trace}[1]{\textsf{Tr}(#1)}
+\newcommand{\trace}[1]{\mbox{Tr}\left( #1 \right)}
+%\newcommand{\trace}[0]{\operatorname{tr}}
+
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+
+\newcommand{\lau}[1]{{\color{red} #1}}
+
+%\newcommand{\comentario}[1]{{\color{red} #1}}
+\newcommand{\comentario}[1]{}
+\renewcommand{\spanishtablename}{\footnotesize{Tabla}}
+\renewcommand{\baselinestretch}{1.5}
+
+%para que ponga ms o menos info en la tabla de contenidos
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+\setcounter{chapter}{0}
+\setlength{\parskip}{1em}
+
+\graphicspath{{/home/daniu/Documentos/tesiiii_daniu/figuras/}}
+\graphicspath{{/home/daniu/Documents/figuras_tesis/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+%% agregado por daniu
+
+\titleformat{\chapter}[display]
+{\normalfont\large\bfseries}{\chaptertitlename\ \thechapter}{0pt}{\Large}
+
+% this alters "before" spacing (the second length argument) to 0
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+
+\titleformat{\section}
+{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{20pt}{0pt}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\titlespacing*{\subsection}{0pt}{20pt}{0pt}
+
+\renewcommand{\chaptermark}[1]{         		% Lower Case Chapter marker style
+	\markboth{\chaptername\ \thechapter.}{}}	
+
+\renewcommand{\sectionmark}[1]{         		% Lower case Section marker style
+	\markright{\thesection.}}         			%
+\fancyhead[LO]{\small\leftmark}     			% Section in the left on odd pages
+
+\newcommand{\repeatcaption}[2]{%
+	\renewcommand{\thefigure}{\ref{#1}}%
+	\captionsetup{list=no}%
+	\caption{#2}%
+}
